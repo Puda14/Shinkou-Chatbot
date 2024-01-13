@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Chatbot UI</title>
+        <title>Shinkō</title>
       </Head>
       <DashboardLayout>
         <Component {...pageProps} />

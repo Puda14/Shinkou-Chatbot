@@ -8,6 +8,7 @@ import TypingAnimation from "./TypingAnimation";
 import api from "@/api/api";
 const inter = Inter({ subsets: ['latin'] });
 
+
 interface ChatMessage {
   type: 'user' | 'bot';
   message: string;
@@ -64,8 +65,8 @@ export default function ChatUI() {
   return (
     
     <div className="container mx-auto">
-      <div className="flex flex-col h-screen bg-gray-900 rounded-2xl">
-        <div className="flex-grow p-6 min-h-[530px]">
+      <div className="flex flex-col min-h-screen h-full bg-gray-900 rounded-2xl">
+        <div className="flex-grow p-6 ">
           <div className="flex flex-col space-y-4">
             {
               chatLog.map((message, index) => (
@@ -90,8 +91,8 @@ export default function ChatUI() {
             }
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="flex-none p-6" style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-          <div className="flex rounded-lg border border-gray-700 bg-gray-800">
+        <form onSubmit={handleSubmit} className="flex-none p-6 " style={{ position: 'fixed', bottom: '40px', left: '58%', transform: 'translateX(-50%)' }}>
+          <div className="flex rounded-lg border border-gray-700 bg-gray-800 w-120vh">
             <input type="text" className="flex-grow px-4 py-2 bg-transparent text-white focus:outline-none" placeholder="Type your message..." value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
             <button type="submit" className="bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300">Send</button>
           </div>
