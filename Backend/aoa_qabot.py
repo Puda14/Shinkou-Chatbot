@@ -53,6 +53,6 @@ prompt = create_prompt(template)
 llm_chain = create_qa_chain(prompt, llm, db)
 
 # Run chain
-question = "Hội nghị lần thứ 8 Ban Chấp hành Trung ương Đảng diễn ra ở đâu vào thời gian nào?"
+question = ("Hội nghị Trung ương 8 của Đảng Cộng sản Đông Dương diễn ra ở đâu?")
 response = llm_chain.invoke({"query": question})
 print(json.dumps(response,indent=4,ensure_ascii=False))
